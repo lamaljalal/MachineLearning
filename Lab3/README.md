@@ -1,16 +1,26 @@
-# Chocolate Sales – Exploratory Data Analysis (EDA)
+# Global Cars – Exploratory Data Analysis (EDA)
 
 ## Objective
-The goal of this project is to perform exploratory data analysis (EDA) on chocolate sales data to understand sales performance, identify top products, analyze country-wise sales, and explore trends over time.
+The goal of this project is to perform exploratory data analysis (EDA) on global car data to understand pricing patterns, identify top brands and manufacturing countries, compare categories (fuel/body type), and explore trends over manufacture years.
 
 ## Dataset
-The dataset `Chocolate_Sales.csv` contains sales records with the following columns:
-- Sales Person
-- Country
-- Product
-- Date
-- Amount
-- Boxes Shipped
+The dataset `global_cars_enhanced (1).csv` contains car records with the following columns:
+- Car_ID
+- Brand
+- Manufacture_Year
+- Body_Type
+- Fuel_Type
+- Transmission
+- Engine_CC
+- Horsepower
+- Mileage_km_per_l
+- Price_USD
+- Manufacturing_Country
+- Car_Age
+- Price_Category
+- HP_per_CC
+- Age_Category
+- Efficiency_Score
 
 ## Tools & Libraries
 - Python
@@ -19,21 +29,26 @@ The dataset `Chocolate_Sales.csv` contains sales records with the following colu
 - Seaborn
 
 ## Data Cleaning
-- Converted the `Amount` column from string format to numeric values.
-- Parsed the `Date` column into datetime format.
-- Removed invalid or missing values after conversion.
+- Stripped column names to avoid spacing issues.
+- Converted numeric fields (e.g., Price_USD, Horsepower, Engine_CC, Mileage_km_per_l) to numeric types.
+- Removed missing/invalid values in key columns needed for analysis (Price_USD, Manufacture_Year).
 
 ## Analysis Performed
-- Total sales calculation
-- Sales analysis by product
-- Sales analysis by country
-- Time-based sales trend analysis
-- Visualization of key insights using bar charts and line plots
+- Summary statistics and missing value checks
+- Total/average/median price analysis
+- Top brands by total price
+- Top manufacturing countries by total price
+- Category comparisons (Fuel Type, Body Type)
+- Time-based trend by manufacture year
+- Price distribution visualization
+- Relationship analysis (Price vs Horsepower)
+- Correlation heatmap for numeric variables
 
 ## Key Insights
-- Smooth Silky Salty is the top-selling product.
-- Canada has the highest total sales among all countries.
-- Overall sales show an increasing trend over time.
+- The top brand and top manufacturing country contribute the highest total price (USD).
+- Higher horsepower generally corresponds to higher price.
+- Fuel type and body type show different total sales values across categories.
+- Total price varies across manufacture years, showing changes in market patterns over time.
 
 ## Conclusion
-The analysis provides valuable insights into product performance, geographic sales distribution, and overall business growth. These insights can help guide strategic decisions related to inventory, marketing, and regional focus.
+This EDA highlights key drivers of car pricing and differences across brands, countries, and categories. The results can support decisions related to market targeting, inventory focus, and understanding factors influencing car prices.
