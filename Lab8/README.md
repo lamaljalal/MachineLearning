@@ -1,115 +1,82 @@
 # K-Nearest Neighbors (KNN) Project
 
-## 📌 Overview
+## Overview
 
-This project demonstrates the implementation of the **K-Nearest Neighbors (KNN)** algorithm using Python and Scikit-learn.
-The goal is to classify data points based on their nearest neighbors.
+This project implements the K-Nearest Neighbors (KNN) algorithm using Python and Scikit-learn. The objective is to classify data points based on the similarity to their nearest neighbors.
 
----
+## Dataset
 
-## 📊 Dataset
+The dataset used is `KNN_Project_Data`, which contains multiple features used to predict the target class.
 
-The dataset used in this project is **KNN_Project_Data**, which contains several features used to predict the target class.
+## Project Steps
 
----
+### 1. Import Libraries
 
-## ⚙️ خطوات العمل
+The following libraries are used:
 
-### 1. استيراد المكتبات
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* scikit-learn
 
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
+### 2. Exploratory Data Analysis (EDA)
 
----
+* Display dataset structure using `head()`
+* Visualize relationships using `pairplot`
 
-### 2. استكشاف البيانات (EDA)
+### 3. Data Preprocessing
 
-* عرض البيانات باستخدام `head()`
-* رسم العلاقات باستخدام `pairplot`
+* Separate features (X) and target (y)
+* Apply feature scaling using `StandardScaler`
 
----
+### 4. Train-Test Split
 
-### 3. تجهيز البيانات
+The dataset is split into training and testing sets to evaluate model performance.
 
-* فصل البيانات إلى:
+### 5. Model Training
 
-  * Features (X)
-  * Target (y)
-* تطبيق **StandardScaler** لتوحيد القيم
+The KNN model is built using:
 
----
+* `KNeighborsClassifier`
 
-### 4. تقسيم البيانات
+### 6. Model Evaluation
 
-تم تقسيم البيانات إلى:
-
-* Training set
-* Testing set
-
----
-
-### 5. بناء النموذج
-
-استخدام خوارزمية:
-
-* **KNeighborsClassifier**
-
----
-
-### 6. التقييم
-
-تم استخدام:
+Performance is evaluated using:
 
 * Confusion Matrix
 * Classification Report
 
----
+### 7. Choosing Optimal K
 
-### 7. اختيار أفضل قيمة K
+* Use the Elbow Method to find the best value of K
+* Plot error rate against different K values
 
-* استخدام **Elbow Method**
-* رسم العلاقة بين K و Error Rate
+## Results
 
----
+The model performance improves after selecting an optimal value of K based on the error rate.
 
-## 📈 النتائج
+## How to Run
 
-تم تحسين النموذج باختيار أفضل قيمة لـ K مما أدى إلى تحسين دقة التنبؤ.
-
----
-
-## 🚀 كيفية التشغيل
-
-1. تأكد من تثبيت المكتبات:
+1. Install dependencies:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-2. تشغيل الملف:
+2. Run Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
-3. افتح ملف:
+3. Open the file:
 
 ```
 Lab8.ipynb
 ```
 
----
+## Notes
 
-## 🧠 ملاحظات
-
-* يجب تطبيق **Scaling** قبل استخدام KNN
-* اختيار قيمة K المناسبة يؤثر بشكل كبير على الأداء
-
----
-
-## 👤 Author
-
-* Your Name
+* Feature scaling is essential for KNN performance
+* The choice of K significantly affects the results
