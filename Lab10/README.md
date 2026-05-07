@@ -1,101 +1,149 @@
-SVM Assignment - Breast Cancer Classification
-📌 Overview
+# 🧠 SVM Assignment – Breast Cancer Classification
 
-This project demonstrates the implementation of a Support Vector Machine (SVM) model for breast cancer classification using the Breast Cancer dataset provided by Scikit-learn.
+A machine learning project that applies the **Support Vector Machine (SVM)** algorithm to classify breast cancer tumors as **malignant** or **benign** using the Breast Cancer Wisconsin dataset from Scikit-learn.
 
-The notebook covers:
+---
 
-Data exploration and visualization
-Data preprocessing
-Training an SVM classifier
-Model evaluation
-Hyperparameter tuning using GridSearchCV
-📂 Dataset
+## 📌 Project Overview
 
-The dataset used is the Breast Cancer Wisconsin Dataset from sklearn.datasets.
+This notebook demonstrates the complete workflow of building a machine learning classification model, including:
 
-Features include:
-Radius
-Texture
-Perimeter
-Area
-Smoothness
-Compactness
-Concavity
-Symmetry
-Target Classes
-Label	Meaning
-0	Malignant
-1	Benign
-🛠️ Technologies & Libraries
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Scikit-learn
-📊 Project Workflow
-1️⃣ Import Libraries
+- Data loading
+- Exploratory Data Analysis (EDA)
+- Data visualization
+- Training an SVM classifier
+- Model evaluation
+- Hyperparameter tuning using GridSearchCV
 
-Imported all required libraries for:
+---
 
-Data analysis
-Visualization
-Machine learning
-2️⃣ Load Dataset
+## 📂 Dataset
 
-Loaded the Breast Cancer dataset using:
+The dataset used is the **Breast Cancer Wisconsin Dataset** available in Scikit-learn.
 
+### 🎯 Target Classes
+
+| Label | Class |
+|------|------|
+| 0 | Malignant |
+| 1 | Benign |
+
+---
+
+## 🛠️ Libraries Used
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+
+---
+
+## ⚙️ Project Workflow
+
+### 1️⃣ Import Required Libraries
+
+Imported all libraries needed for:
+- Data analysis
+- Data visualization
+- Machine learning
+
+---
+
+### 2️⃣ Load the Dataset
+
+```python
 from sklearn.datasets import load_breast_cancer
-3️⃣ Exploratory Data Analysis (EDA)
+```
 
-Performed data exploration and visualization using:
+Loaded the dataset and converted it into a Pandas DataFrame for easier analysis.
 
-Pairplot
-KDE plots
-Dataset information and statistics
-4️⃣ Train/Test Split
+---
 
-Split the dataset into training and testing sets using:
+### 3️⃣ Exploratory Data Analysis (EDA)
 
-train_test_split()
-5️⃣ Train SVM Model
+Performed data exploration using:
+- `.info()`
+- `.describe()`
+- Pairplots
+- KDE plots
 
-Built and trained an SVM classifier using:
+This helped visualize relationships between features and understand the dataset structure.
 
+---
+
+### 4️⃣ Split the Data
+
+Used `train_test_split()` to divide the dataset into:
+- Training data
+- Testing data
+
+---
+
+### 5️⃣ Train the SVM Model
+
+```python
 from sklearn.svm import SVC
-6️⃣ Model Evaluation
+```
 
-Evaluated model performance using:
+Created and trained an SVM classifier on the training dataset.
 
-Confusion Matrix
-Classification Report
-Accuracy Score
-7️⃣ Hyperparameter Tuning
+---
 
-Optimized the model using:
+### 6️⃣ Evaluate the Model
 
-GridSearchCV
+Model performance was evaluated using:
+- Confusion Matrix
+- Classification Report
+- Accuracy Score
 
-Tuned parameters:
+---
 
-C
-gamma
-✅ Results
-Achieved approximately 98% accuracy
-GridSearchCV produced optimized parameters with very high performance
-▶️ How to Run
-Clone the repository
-git clone <your-repository-link>
-Open the notebook
+### 7️⃣ Hyperparameter Tuning
+
+Used `GridSearchCV` to optimize:
+- `C`
+- `gamma`
+
+This improved the model performance and selected the best parameters automatically.
+
+---
+
+## ✅ Results
+
+- Model Accuracy: **~98%**
+- The optimized SVM model achieved excellent classification performance.
+
+---
+
+## ▶️ How to Run
+
+### Clone the repository
+
+```bash
+git clone <repository-link>
+```
+
+### Open the notebook
+
+```bash
 02-SVM Assignment - Solved.ipynb
-Run all cells
+```
 
-Execute all notebook cells sequentially.
+### Run all notebook cells sequentially
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
+
+```bash
 ├── 02-SVM Assignment - Solved.ipynb
-├── README.md
-👨‍💻 Author
+└── README.md
+```
 
-Machine Learning Lab — SVM Assignment
+---
+
+## 👨‍💻 Author
+
+Machine Learning Lab – SVM Assignment
